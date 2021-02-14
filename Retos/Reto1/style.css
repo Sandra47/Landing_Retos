@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 120vw;
+  margin:10 auto;
+  padding: 13%;
+}
+
+.panel {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 70px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;/*da el borde circulas en las punta de la imagenes*/
+  margin: 10px;
+  transition:width 0.3s ease-in-out;
+}
+
+.panel h3 {
+  align-content: center;
+  position: relative;
+  top: 92%;
+  right: 10%;
+  left: 20px;
+  font-size: 18px;
+  bottom: 5px;
+  margin: 0px;
+  opacity: 0;
+
+}
+
+.panel.active {
+  
+  flex: absolute;
+  width: 900px;
+}
+/*
+.panel.active:hover {
+  width: 450vw;
+
+}*/
+
+.panel.active h3 {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+  
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    padding: 1%;
+    margin: 10px;
+  }
+ 
+  .panel.active{
+    width: 200px;
+  }
+  .panel.active h3{
+    font-size: 12px;
+  }
+
+  .panel:nth-of-type(4), .panel:nth-of-type(5){ /*para que solo se visualice 3 seleccionamos el 4 y 5 */
+    display:none;
+    /*display:block;*/
+  }
+  
+}

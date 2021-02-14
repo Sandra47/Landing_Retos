@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    display: flex;
+
+  }
+  .container {
+    display: grid;
+    grid-template-columns:repeat(20, 15px); 
+    grid-template-rows:repeat(25, 15px);
+    width: 305px;
+    height: 380px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+  }
+  
+  .square {
+    border: solid 2px  black;
+    background-color: #1d1d1d;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    transition:  2s ease;
+    box-shadow: 0 0 2px #000;
+  }
+   
+  .square:hover {
+    transition-duration: 0s;
+    
+  }
