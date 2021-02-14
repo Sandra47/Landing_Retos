@@ -3,12 +3,13 @@ body{
    margin: 0;
    font-family: 'Courier New', Courier, monospace;
 }
-h1{
+.titulo{
     color:bisque;
     text-align: center;
+    font-size: 30px;
 }
 
-/*estilo del Hear*/
+/*estilo del Header*/
 
 header {
     width:100%; /* Establecemos que el header abarque el 100% del documento */
@@ -16,8 +17,6 @@ header {
 	overflow:hidden; /* Eliminamos errores de float */
 	background: #ef9a9a;
     margin-bottom:20px;
-    
-
 }
  
 .wrapper {
@@ -30,9 +29,9 @@ header {
     margin-top: 20px;
 }
  
-header .logo {
+header .wrapper .logo {
 	color:#f2f2f2;
-	font-size:20px;
+	font-size: 20px;
 	line-height:200px;
     float:left;
     margin-top: -70px;
@@ -80,9 +79,9 @@ header  .search .input {
    outline:white;
   }
   
-  .search.active .input {
+  header .wrapper .search.active .input {
   
-    width: 300px; /* amplitud de Input*/
+    width: 400px; /* amplitud de Input*/
     background: white;
     
   }
@@ -99,6 +98,7 @@ header  .search .input {
     width: 100%;
     height: 100%;
 }
+
 /*Estilo de la galareria*/
 
 .galeria{
@@ -111,27 +111,38 @@ header  .search .input {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.galeria li{
+/* .galeria li{
     margin: 2px;
-}
+} */
 .galeria img {
+    box-shadow: 0 8px -4px  rgba(0, 0, 0, .6);
+    border-radius: 15px;
     width: 200px;
-    height: 100px;
+    height: 150px;
+    margin-bottom: 2px;
 }
 .galeria_item{
     cursor:pointer;
+    margin: 2px;
+    margin-bottom: 5px;
 
 }
 
-.titulo_Reto{
-    font-size: 12px;
+.galeria_item .titulo_Reto{
+    font-size: 15px;  
+    text-align: left;  
 }
+
+/*footer*/
 footer{
-    width:100%; /* Establecemos que el header abarque el 100% del documento */
-    height: 50px;
+    width:100%; /* Establecemos que el footer abarque el 100% del documento */
+    height: 100px;
 	overflow:hidden; /* Eliminamos errores de float */
 	background: #ef9a9a;
     margin-bottom:20px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 footer p {
     font-size: 15px;
@@ -139,24 +150,162 @@ footer p {
 }
 
 
-@media (min-width: 480px){
-  .galeria_item{
+
+@media only screen and (min-width: 280px) and (max-width: 400px) {
+
+    header {
+        width:100%; 
+        height: 100px;
+        overflow:hidden; 
+        background: #ef9a9a;
+        margin-bottom:20px;
+    }
+     
+    header .wrapper .logo  {
+        color:#f2f2f2;
+        font-size:15px;
+        line-height:200px;
+        float:left;
+        margin-top: -70px;
+      
+    }
+    h1{
+        color:bisque;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*busqueda*/
+    header .search {
+      position: relative;
+      height: 30px;
+    }
+    header  .search .input {
+   
+      border: 0;
+      background: #fff;
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      padding: 15px;
+      font-family: inherit;
+      font-size: 15px;
+      color: #2c3e50;
+      transition: 1s;
+    }
+  
+.btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2c3e50;
+    background-color: #fff;
+    /*transition: transform 0.3s ease;*/
+    
+  
+}
+  
+  
+  .btn:focus,
+  .input:focus {
+   outline:white;
+  }
+  
+  header .wrapper .search.active .input {
+  
+    width: 150px; /* amplitud de Input*/
+    background: white;
+    
+  }
+  
+
+    .galeria_item{
       width: 48%;
       margin: 5px;
       
-  }
+    }
 }
-@media (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    header {
+        width:100%; 
+        height: 100px;
+        overflow:hidden; 
+        background: #ef9a9a;
+        margin-bottom:20px;
+    }
+     
+    header .logo {
+        color:#f2f2f2;
+        font-size:10px;
+        line-height:200px;
+        float:left;
+        margin-top: -70px;
+      
+    }
+    h1{
+        color:bisque;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*busqueda*/
+    header .search {
+      position: relative;
+      height: 50px;
+    }
+    header  .search .input {
+   
+      border: 0;
+      background: #fff;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      padding: 15px;
+      font-family: inherit;
+      font-size: 15px;
+      color: #2c3e50;
+      transition: 1s;
+    }
+  
+.btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2c3e50;
+    background-color: #fff;
+    /*transition: transform 0.3s ease;*/
+    
+  
+}
+  
+  
+  .btn:focus,
+  .input:focus {
+   outline:white;
+  }
+  
+  header .wrapper .search.active .input {
+  
+    width: 300px; /* amplitud de Input*/
+    background: white;
+    
+  }
+  
     .galeria_item{
         width: 33%;
-        margin: 5px;
+        margin: 6px;
+        margin-bottom: 5px;
         
     }
   }
-  @media (min-width: 1024px){
-    .galeria_item{
-        width: 20%;
-        margin: 15px;
-        
-    }
-  }
+ 
