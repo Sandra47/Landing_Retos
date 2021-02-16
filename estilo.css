@@ -131,12 +131,15 @@ header  .search .input {
 .galeria_item .titulo_Reto{
     font-size: 15px;  
     text-align: left;  
+    
 }
-
+a{
+    color:#f15c5c;
+}
 /*footer*/
 footer{
     width:100%; /* Establecemos que el footer abarque el 100% del documento */
-    height: 100px;
+    height: 100%;
 	overflow:hidden; /* Eliminamos errores de float */
 	background: #ef9a9a;
     margin-bottom:20px;
